@@ -24,17 +24,20 @@ metadata:
         ) by (pod)
       )
 spec:
-  maxReplicas: 10
-  minReplicas: 1
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
     name: podinfo
+  minReplicas: 1
+  maxReplicas: 10
   metrics:
-  - type: Pods
-    pods:
+  - type: External
+    external:
       metric:
         name: istio-requests-total
+        selector:
+          matchLabels:
+            type: prometheus
       target:
-        averageValue: 10
-        type: Value
+        type: AverageValue
+        averageValue: "10"
