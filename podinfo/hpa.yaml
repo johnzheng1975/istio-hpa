@@ -4,8 +4,8 @@ metadata:
   name: podinfo
   namespace: test
   annotations:
-    metric-config.pods.istio-requests-total.prometheus/per-replica: "true"
-    metric-config.pods.istio-requests-total.prometheus/query: |
+    # metric-config.pods.istio-requests-total.prometheus/per-replica: "true"
+    metric-config.external.istio-requests-total.prometheus/query: |
       sum(
           rate(
               istio_requests_total{
