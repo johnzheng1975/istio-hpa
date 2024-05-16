@@ -38,7 +38,7 @@ kubectl apply -f ./kube-metrics-adapter/
 When the adapter starts, it will generate a self-signed cert and will register itself
 under the `custom.metrics.k8s.io` group.
 
-The adapter is configured to query the Prometheus instance that's running in the `istio-system` namespace.
+The adapter is configured to query the Prometheus instance that's running in the `istio-system`(change to `infra` per my project) namespace.
 
 Verify the install by checking the adapter logs:
 
