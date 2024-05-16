@@ -12,7 +12,7 @@ metadata:
                 destination_workload="podinfo",
                 destination_workload_namespace="test",
                 reporter="destination"
-              }[1m]
+              }[2m]
           )
       ) /
       count(
