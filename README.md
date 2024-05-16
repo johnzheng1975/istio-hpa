@@ -22,10 +22,10 @@ stores the metrics in memory.
 
 ### Installing the custom metrics adapter
 
-Clone the [istio-hpa](https://github.com/stefanprodan/istio-hpa) repository:
+Clone the [istio-hpa](https://github.com/johnzheng1975/istio-hpa) repository:
 
 ```bash
-git clone https://github.com/stefanprodan/istio-hpa
+git clone https://github.com/johnzheng1975/istio-hpa
 cd istio-hpa
 ```
 
