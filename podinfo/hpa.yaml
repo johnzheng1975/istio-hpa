@@ -1,4 +1,4 @@
-apiVersion: autoscaling/v2beta1
+apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: podinfo
@@ -31,11 +31,10 @@ spec:
     kind: Deployment
     name: podinfo
   metrics:
-    - type: Object
-      object:
-        metricName: istio-requests-total
-        target:
-          apiVersion: v1
-          kind: Pod
-          name: podinfo
-        targetValue: 10
+  - type: Pods
+    pods:
+      metric:
+        name: istio-requests-total
+      target:
+        averageValue: 10
+        type: Value
