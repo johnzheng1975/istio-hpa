@@ -5,6 +5,7 @@ metadata:
   namespace: test
   annotations:
     # metric-config.pods.istio-requests-total.prometheus/per-replica: "true"
+    metric-config.external.istio-requests-total.prometheus/prometheus-server: http://prometheus-server.infra.svc
     metric-config.external.istio-requests-total.prometheus/query: |
       sum(
           rate(
