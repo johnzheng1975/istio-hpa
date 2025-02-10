@@ -191,7 +191,7 @@ load goes over 10 req/sec per replica.
 Create the HPA with:
 
 ```bash
-kubectl apply -f ./podinfo/hpa.yaml
+kubectl apply -f ./podinfo/hpa-padapter.yaml
 ```
 
 Start a load test and verify that the adapter computes the metric:
