@@ -87,7 +87,7 @@ spec:
   metrics:
   - pods:
       metric:
-        name: istio_requests
+        name: istio_requests  #should be istio_requests_per_second, otherwise, hpa will show unknown
       target:
         averageValue: 500m
         type: Value
