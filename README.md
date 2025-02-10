@@ -32,7 +32,9 @@ cd istio-hpa
 Deploy the metrics adapter in the `kube-system` namespace:
 
 ```bash
-kubectl apply -f ./kube-metrics-adapter/
+# git clone git@github.com:johnzheng1975/kube-metrics-adapter.git
+$ cd kube-metrics-adapter/docs
+$ kubectl apply -f .
 ```
 
 When the adapter starts, it will generate a self-signed cert and will register itself
