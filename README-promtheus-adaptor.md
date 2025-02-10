@@ -50,7 +50,7 @@ https://github.com/kubernetes-sigs/aws-ebs-csi-driver/blob/master/docs/example-i
 
 
 ### Important configure for improve.
-- Replace current adapter configmap with below:
+- Replace current adapter configmap with below, and restart pods for adapter.
 ```
 # kubectl  get cm prometheus-adapter -oyaml
 apiVersion: v1
