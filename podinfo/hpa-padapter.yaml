@@ -20,7 +20,8 @@ spec:
     pods:
       # use the metric that you used above: pods/istio_requests
       metric:
-        name: istio_requests
+        #name: istio_requests
+        name: requests_per_second
       # target 500 milli-requests per second,
       # which is 1 request every two seconds
       target:
