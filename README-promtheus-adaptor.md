@@ -50,7 +50,7 @@ https://github.com/kubernetes-sigs/aws-ebs-csi-driver/blob/master/docs/example-i
 
 
 ### Important configure for improve.
-- Replace current adapter configmap with below:
+- Replace current adapter configmap with below, and restart pods for adapter.
 ```
 # kubectl  get cm prometheus-adapter -oyaml
 apiVersion: v1
@@ -87,7 +87,7 @@ spec:
   metrics:
   - pods:
       metric:
-        name: istio_requests
+        name: istio_requests  #should be istio_requests_per_second, otherwise, hpa will show unknown
       target:
         averageValue: 500m
         type: Value
@@ -191,7 +191,7 @@ load goes over 10 req/sec per replica.
 Create the HPA with:
 
 ```bash
-kubectl apply -f ./podinfo/hpa.yaml
+kubectl apply -f ./podinfo/hpa-padapter.yaml
 ```
 
 Start a load test and verify that the adapter computes the metric:
