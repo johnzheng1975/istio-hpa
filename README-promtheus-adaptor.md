@@ -12,8 +12,8 @@
 # Quick Install
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
-helm install prometheus-adapter prometheus-community/prometheus-adapter
 helm install prometheus  prometheus-community/prometheus
+helm install prometheus-adapter prometheus-community/prometheus-adapter
 helm ls -A
 
 (trycluster02):  johnzhengaz@HP-CND3051QF51:~/tmp/Feb5/kubeadm-workshop/demos/monitoring$ helm ls -A
